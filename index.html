@@ -1,205 +1,250 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yatra Seva | Journey Beyond Boundaries</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        /* CSS directly included for your convenience */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <title>Yatra Seva – Trusted Travel Partner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background-color: #f4f4f4;
-            color: #333;
-        }
+  <style>
+    /* ===== YATRA SEVA BRAND COLORS ===== */
+    :root {
+      --primary: #e67e22;   /* saffron / orange */
+      --secondary: #0b3c5d; /* deep blue */
+      --dark: #1c1c1c;
+      --light: #ffffff;
+      --gray: #f5f5f5;
+    }
 
-        /* Color Theme: Red (#E63946), Black (#1D3557), Silver/White (#F1FAEE) */
-        
-        /* Navigation */
-        nav {
-            background-color: #000; /* Black */
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 3px solid #E63946; /* Red border */
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        .logo {
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
+    body {
+      background: var(--light);
+      color: var(--dark);
+    }
 
-        .logo span {
-            color: #E63946; /* Red */
-        }
+    /* ===== HEADER ===== */
+    header {
+      background: var(--light);
+      padding: 15px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
+    }
 
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
+    header img {
+      height: 50px;
+    }
 
-        nav ul li {
-            margin-left: 20px;
-        }
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+    }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 400;
-            transition: 0.3s;
-        }
+    nav a:hover {
+      color: var(--primary);
+    }
 
-        nav ul li a:hover {
-            color: #E63946;
-        }
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background: linear-gradient(
+        rgba(11,60,93,0.7),
+        rgba(11,60,93,0.7)
+      ),
+      url("images/hero.jpg") center/cover no-repeat;
+      height: 85vh;
+      display: flex;
+      align-items: center;
+      padding: 0 60px;
+      color: white;
+    }
 
-        /* Hero Section */
-        .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
-        }
+    .hero-content {
+      max-width: 600px;
+    }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-        }
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            color: #C0C0C0; /* Silver */
-        }
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
 
-        .btn {
-            background-color: #E63946;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+    .hero button {
+      background: var(--primary);
+      border: none;
+      padding: 14px 30px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
 
-        .btn:hover {
-            background-color: #fff;
-            color: #000;
-        }
+    .hero button:hover {
+      background: #cf711f;
+    }
 
-        /* Features/Services Section */
-        .services {
-            padding: 50px 10%;
-            text-align: center;
-        }
+    /* ===== SERVICES ===== */
+    .services {
+      padding: 70px 60px;
+      background: var(--gray);
+      text-align: center;
+    }
 
-        .services h2 {
-            margin-bottom: 40px;
-            font-size: 2.5rem;
-        }
+    .services h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      color: var(--secondary);
+    }
 
-        .services h2 span {
-            color: #E63946;
-        }
+    .service-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    .service {
+      background: white;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
 
-        .card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: 0.3s;
-            border-bottom: 4px solid transparent;
-        }
+    .service h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
 
-        .card:hover {
-            transform: translateY(-10px);
-            border-bottom: 4px solid #E63946;
-        }
+    /* ===== ABOUT ===== */
+    .about {
+      padding: 70px 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
 
-        .card i {
-            font-size: 3rem;
-            color: #E63946;
-            margin-bottom: 15px;
-        }
+    .about h2 {
+      color: var(--secondary);
+      margin-bottom: 15px;
+    }
 
-        /* Footer */
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 50px;
-        }
-    </style>
+    .about p {
+      line-height: 1.7;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--secondary);
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.png" alt="Yatra Seva Logo">
     <nav>
-        <div class="logo">YATRA<span> SEVA</span></div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+      <a href="#">Home</a>
+      <a href="#">Packages</a>
+      <a href="#">Vehicles</a>
+      <a href="#">Contact</a>
     </nav>
+  </header>
 
-    <section class="hero">
-        <h1>YATRA SEVA</h1>
-        <p>Journey Beyond Boundaries</p>
-        <a href="contact.html" class="btn">Book Your Journey</a>
-    </section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Trusted Travel Partner</h1>
+      <p>
+        Yatra Seva offers reliable tour packages, tempo travellers,
+        buses and complete travel solutions across India.
+      </p>
+      <button>Explore Packages</button>
+    </div>
+  </section>
 
-    <section class="services">
-        <h2>Our <span>Services</span></h2>
-        <div class="grid">
-            <div class="card">
-                <i class="fas fa-route"></i>
-                <h3>Tour Planning</h3>
-                <p>Customized travel itineraries for your dream destinations.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-hotel"></i>
-                <h3>Hotel Booking</h3>
-                <p>Comfortable stays at the best prices, globally.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-car"></i>
-                <h3>Transport</h3>
-                <p>Seamless travel with our premium transport services.</p>
-            </div>
-        </div>
-    </section>
+  <!-- SERVICES -->
+  <section class="services">
+    <h2>Our Services</h2>
 
-    <footer>
-        <p>&copy; 2026 Yatra Seva. All Rights Reserved.</p>
-    </footer>
+    <div class="service-box">
+      <div class="service">
+        <h3>Tour Packages</h3>
+        <p>Domestic & pilgrimage tours with best pricing.</p>
+      </div>
+
+      <div class="service">
+        <h3>Tempo Traveller</h3>
+        <p>Clean, comfortable & pushback seats.</p>
+      </div>
+
+      <div class="service">
+        <h3>Bus Rental</h3>
+        <p>Mini bus & luxury coaches for all journeys.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div>
+      <h2>Why Yatra Seva?</h2>
+      <p>
+        We believe in safe, affordable and comfortable travel.
+        Our focus is customer satisfaction, transparent pricing
+        and timely service.
+      </p>
+    </div>
+
+    <div>
+      <img src="images/about.jpg" alt="Travel" style="width:100%; border-radius:8px;">
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Yatra Seva | All Rights Reserved</p>
+  </footer>
 
 </body>
 </html>
