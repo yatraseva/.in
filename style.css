@@ -1,141 +1,80 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+/* YATRA SEVA - Professional & Safe Theme */
+:root {
+    --brand-red: #E31E24;     /* आपका लाल रंग */
+    --brand-black: #111111;   /* आपका काला रंग */
+    --brand-silver: #E8E8E8;  /* आपका सिल्वर/व्हाइट */
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fdfdfd;
 }
 
-nav {
-    background-color: #000;
-    padding: 1rem 5%;
+/* Header: Clean & Modern */
+.main-header {
+    background: #fff;
+    padding: 15px 50px;
+    border-bottom: 3px solid var(--brand-red);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 3px solid #E63946;
 }
 
-.logo {
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 700;
+.brand-logo {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--brand-black);
+    text-decoration: none;
 }
 
-.logo span {
-    color: #E63946;
+.brand-logo span {
+    color: var(--brand-red);
 }
 
-nav ul {
+/* Navigation like big agencies */
+.nav-bar {
+    background: var(--brand-black);
+    padding: 12px;
     display: flex;
-    list-style: none;
+    justify-content: center;
+    gap: 30px;
 }
 
-nav ul li {
-    margin-left: 20px;
-}
-
-nav ul li a {
+.nav-bar a {
     color: #fff;
     text-decoration: none;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 500;
     transition: 0.3s;
 }
 
-nav ul li a:hover {
-    color: #E63946;
+.nav-bar a:hover {
+    color: var(--brand-red);
 }
 
-.hero {
-    height: 80vh;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+/* Special Banner Section */
+.hero-banner {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('travel-bg.jpg');
+    height: 450px;
     background-size: cover;
-    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     color: #fff;
-    padding: 0 20px;
 }
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #C0C0C0;
-}
-
-.btn {
-    background-color: #E63946;
-    color: white;
-    padding: 12px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #fff;
-    color: #000;
-}
-
-.services {
-    padding: 50px 10%;
-    text-align: center;
-}
-
-.services h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-}
-
-.services h2 span {
-    color: #E63946;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card {
+/* Search Box: Unique & Different from Dpauls */
+.booking-box {
     background: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    border-bottom: 4px solid transparent;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    border-bottom: 4px solid #E63946;
-}
-
-.card i {
-    font-size: 3rem;
-    color: #E63946;
-    margin-bottom: 15px;
-}
-
-footer {
-    background: #000;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: -60px;
+    width: 85%;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
 }
