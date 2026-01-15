@@ -3,51 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domestic Packages - Yatra Seva</title>
+    <title>Domestic Tour Packages - Yatra Seva</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        
+        .package-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 40px 5%;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-bottom: 5px solid #ff0000;
+        }
+
+        .package-card:hover { transform: translateY(-10px); border-color: #000; }
+
+        .package-info { padding: 20px; }
+        
+        .duration { color: #d32f2f; font-weight: bold; font-size: 0.85rem; }
+        
+        .package-info h3 { margin: 10px 0; font-size: 1.3rem; color: #111; }
+        
+        .price-tag { 
+            font-size: 1.4rem; 
+            font-weight: bold; 
+            color: #000;
+            margin: 15px 0;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .book-btn {
+            background: #ff0000;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .book-btn:hover { background: #000; }
+
+        footer {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 5px solid #ff0000;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Domestic Travel Packages</h1>
-    <p>Explore the beauty of India with Yatra Seva</p>
-</header>
+    <nav>
+        <div class="logo">YATRA<span> SEVA</span></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domestic.html" style="color: red;">Domestic</a></li>
+            <li><a href="international.html">International</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="domestic.html">Domestic</a></li>
-        <li><a href="international.html">International</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <header style="text-align: center; padding: 60px; background: #333; color: white;">
+        <h1>Domestic Holiday Packages</h1>
+        <p>YATRA SEVA: Journey Beyond Boundaries</p>
+    </header>
 
-<main>
-    <h2>Our Domestic Packages</h2>
-    <div class="packages">
-        <div class="package">
-            <h3>Himachal Tour</h3>
-            <p>5 Days / 4 Nights | ₹10,000</p>
+    <div class="package-container">
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">2 Nights / 3 Days</p>
+                <h3>Varanasi Spiritual Tour</h3>
+                <p>Ganga Aarti, Kashi Vishwanath Temple & Sarnath Visit</p>
+                <div class="price-tag">₹7,499/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
         </div>
-        <div class="package">
-            <h3>Goa Beach Trip</h3>
-            <p>3 Days / 2 Nights | ₹8,000</p>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">5 Nights / 6 Days</p>
+                <h3>Kashmir Paradise</h3>
+                <p>Srinagar, Gulmarg, Pahalgam & Sonmarg</p>
+                <div class="price-tag">₹18,500/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
         </div>
-        <div class="package">
-            <h3>Kerala Backwaters</h3>
-            <p>4 Days / 3 Nights | ₹12,000</p>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">4 Nights / 5 Days</p>
+                <h3>Kerala Backwaters</h3>
+                <p>Munnar, Thekkady & Alleppey Houseboat</p>
+                <div class="price-tag">₹15,999/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
         </div>
-        <div class="package">
-            <h3>Rajasthan Heritage</h3>
-            <p>6 Days / 5 Nights | ₹15,000</p>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">5 Nights / 6 Days</p>
+                <h3>Shimla & Manali</h3>
+                <p>Rohtang Pass, Solang Valley & Mall Road</p>
+                <div class="price-tag">₹12,499/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">3 Nights / 4 Days</p>
+                <h3>Goa Beach Party</h3>
+                <p>North Goa Sightseeing & Boat Cruise</p>
+                <div class="price-tag">₹9,999/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">6 Nights / 7 Days</p>
+                <h3>Royal Rajasthan</h3>
+                <p>Jaipur, Jodhpur & Udaipur (Lake City)</p>
+                <div class="price-tag">₹22,500/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">5 Nights / 6 Days</p>
+                <h3>Andaman Islands</h3>
+                <p>Radhanagar Beach, Havelock & Cellular Jail</p>
+                <div class="price-tag">₹28,500/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">4 Nights / 5 Days</p>
+                <h3>Nainital & Mussoorie</h3>
+                <p>Lake Tour, Kempty Falls & Mall Road</p>
+                <div class="price-tag">₹13,800/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">6 Nights / 7 Days</p>
+                <h3>Ladakh Adventure</h3>
+                <p>Pangong Lake, Nubra Valley & Khardung La</p>
+                <div class="price-tag">₹24,999/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">5 Nights / 6 Days</p>
+                <h3>Sikkim & Darjeeling</h3>
+                <p>Gangtok, Tsomgo Lake & Tiger Hill</p>
+                <div class="price-tag">₹19,500/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">11 Nights / 12 Days</p>
+                <h3>Complete Char Dham</h3>
+                <p>Yamunotri, Gangotri, Kedarnath, Badrinath</p>
+                <div class="price-tag">₹34,000/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">5 Nights / 6 Days</p>
+                <h3>Heritage Triangle</h3>
+                <p>Delhi, Agra (Taj Mahal) & Jaipur</p>
+                <div class="price-tag">₹14,500/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">5 Nights / 6 Days</p>
+                <h3>Tamil Nadu Temple Tour</h3>
+                <p>Madurai, Rameshwaram & Kanyakumari</p>
+                <div class="price-tag">₹17,800/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">4 Nights / 5 Days</p>
+                <h3>Rann of Kutch Special</h3>
+                <p>White Desert, Bhuj & Handicraft Villages</p>
+                <div class="price-tag">₹16,500/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
+        </div>
+
+        <div class="package-card">
+            <div class="package-info">
+                <p class="duration">5 Nights / 6 Days</p>
+                <h3>Meghalaya - Clouds Abode</h3>
+                <p>Shillong, Cherrapunji & Dawki River</p>
+                <div class="price-tag">₹21,000/- <small>per person</small></div>
+                <a href="#" class="book-btn">View Details</a>
+            </div>
         </div>
     </div>
-</main>
 
-<footer>
-    <p>Contact: 9650630410 | Email: yatraseva.in@gmail.com</p>
-</footer>
+    <footer>
+        <h2 style="color: #ff0000;">YATRA SEVA</h2>
+        <p>Journey Beyond Boundaries</p>
+        <p style="margin-top: 20px; font-size: 0.9rem; color: #bbb;">
+            © 2026 YATRA SEVA. All Rights Reserved.
+        </p>
+    </footer>
 
 </body>
 </html>

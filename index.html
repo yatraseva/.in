@@ -1,51 +1,205 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yatra Seva</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Yatra Seva | Journey Beyond Boundaries</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* CSS directly included for your convenience */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Color Theme: Red (#E63946), Black (#1D3557), Silver/White (#F1FAEE) */
+        
+        /* Navigation */
+        nav {
+            background-color: #000; /* Black */
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid #E63946; /* Red border */
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .logo span {
+            color: #E63946; /* Red */
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #E63946;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #C0C0C0; /* Silver */
+        }
+
+        .btn {
+            background-color: #E63946;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Features/Services Section */
+        .services {
+            padding: 50px 10%;
+            text-align: center;
+        }
+
+        .services h2 {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+
+        .services h2 span {
+            color: #E63946;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-bottom: 4px solid #E63946;
+        }
+
+        .card i {
+            font-size: 3rem;
+            color: #E63946;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Yatra Seva</h1>
-    <p>Your Trusted Travel Partner</p>
-</header>
+    <nav>
+        <div class="logo">YATRA<span> SEVA</span></div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="domestic.html">Domestic</a></li>
-        <li><a href="international.html">International</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <section class="hero">
+        <h1>YATRA SEVA</h1>
+        <p>Journey Beyond Boundaries</p>
+        <a href="contact.html" class="btn">Book Your Journey</a>
+    </section>
 
-<main>
-    <h2>Our Travel Packages</h2>
-    <p>Explore the best destinations with our trusted travel services.</p>
-
-    <div class="packages">
-        <div class="package">
-            <h3>Himachal Tour</h3>
-            <p>5 Days / 4 Nights | ₹10,000</p>
+    <section class="services">
+        <h2>Our <span>Services</span></h2>
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-route"></i>
+                <h3>Tour Planning</h3>
+                <p>Customized travel itineraries for your dream destinations.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-hotel"></i>
+                <h3>Hotel Booking</h3>
+                <p>Comfortable stays at the best prices, globally.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-car"></i>
+                <h3>Transport</h3>
+                <p>Seamless travel with our premium transport services.</p>
+            </div>
         </div>
-        <div class="package">
-            <h3>Goa Beach Trip</h3>
-            <p>3 Days / 2 Nights | ₹8,000</p>
-        </div>
-        <div class="package">
-            <h3>Kerala Backwaters</h3>
-            <p>4 Days / 3 Nights | ₹12,000</p>
-        </div>
-    </div>
-</main>
+    </section>
 
-<footer>
-    <p>Contact: 9650630410 | Email: yatraseva.in@gmail.com</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Yatra Seva. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
